@@ -56,6 +56,7 @@ buildTypes
 ---
 最基本有兩種 build types：*debug* & *release*。你可以自訂你的build type。
 build type裡可以設定 *Debugable*, *SigningConfig*, *Minify Enables*...等等，你可以進入Project Stucture > Build Types 瀏覽所有的設定。
+![buildtype](./images/buildtype.png)
 
 以下是本 sample app 的設定：
 ```xml
@@ -86,6 +87,7 @@ productFlavors
 
 
 詳情可以至 Project Structure > Flavors 瀏覽所有的設定。
+![flavors](./images/flavors.png)
 
 以下是本 sample app 的設定
 ```xml
@@ -104,7 +106,7 @@ productFlavors {
 >+ 這裏設定兩個 flavors：*demo* & *pub*
 >+ 兩個 flavor 有各自的 versionName & Application ID
 >+ 使用時，可以從Android Studio 側邊選單 > Build Variants 選擇。此時，依照上述的 build type 設定，你會有四個選項：demoDebug, demoRelease, pubDebug, pubRelease
-
+![build_variants](./images/build_variants.png)
 
 Work with build variants
 ---
