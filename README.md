@@ -48,6 +48,8 @@ signingConfigs {
 ```
 
 實作上，有時為了不想要把 keystore 的密碼一併寫進 build.gradle，甚至是上傳的 Version Control System，所以可以把這些 info 寫進 **local.properties** 裡。可直接參考本 sample app。
+>**提醒**
+>這裏只是為了示範，否則請勿把 **local.properties** 上傳至 github 或其他 Version Control System
 
 
 buildTypes
