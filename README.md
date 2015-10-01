@@ -34,7 +34,7 @@ android {
 
 singingConfigs
 ---
-設定你的keystore。
+設定你的**keystore**。
 
 ```xml
 signingConfigs {
@@ -69,19 +69,19 @@ buildTypes {
     }
 ```
 >**Explanation**：
->1. 如果使用 *debug build type*，會自動在 application id 後面添加 .debug。以本 sample app 為例，application id 就會變成 **com.sprout.gradletest.debug**
->2. 如果使用 *release build type*，會啟用 **proguard**，並且參照 proguard-rules.pro的規則
->3. 小提醒，debug build type 無法啟用 proguard
+>+ 如果使用 *debug build type*，會自動在 application id 後面添加 .debug。以本 sample app 為例，application id 就會變成 **com.sprout.gradletest.debug**
+>+ 如果使用 *release build type*，會啟用 **proguard**，並且參照 proguard-rules.pro的規則
+>+ 小提醒，debug build type 無法啟用 proguard
 
 productFlavors
 ---
-可以在Flavors設定的項目如下：
-1. Min SDK Version
-2. Target SDK Version
-3. Application ID
-4. Version Name & Version Code
-5. Signing Config
-6. ...
+可以在Flavors設定的部份項目如下：
++ Min SDK Version
++ Target SDK Version
++ Application ID
++ Version Name & Version Code
++ Signing Config
+
 
 詳情可以至 Project Structure > Flavors 瀏覽所有的設定。
 
@@ -98,10 +98,10 @@ productFlavors {
         }
     }
 ```
-**Explanation**：
-1. 這裏設定兩個 flavors：*demo* & *pub*
-2. 兩個 flavor 有各自的 versionName & Application ID
-3. 使用時，可以從Android Studio 側邊選單 > Build Variants 選擇。此時，依照上述的 build type 設定，你會有四個選項：demoDebug, demoRelease, pubDebug, pubRelease
+>**Explanation**：
+>+ 這裏設定兩個 flavors：*demo* & *pub*
+>+ 兩個 flavor 有各自的 versionName & Application ID
+>+ 使用時，可以從Android Studio 側邊選單 > Build Variants 選擇。此時，依照上述的 build type 設定，你會有四個選項：demoDebug, demoRelease, pubDebug, pubRelease
 
 
 Work with build variants
