@@ -106,6 +106,7 @@ productFlavors {
 >+ 這裏設定兩個 flavors：*demo* & *pub*
 >+ 兩個 flavor 有各自的 versionName & Application ID
 >+ 使用時，可以從Android Studio 側邊選單 > Build Variants 選擇。此時，依照上述的 build type 設定，你會有四個選項：demoDebug, demoRelease, pubDebug, pubRelease
+
 ![build_variants](./images/build_variants.png)
 
 Work with build variants
