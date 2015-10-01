@@ -2,12 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        SproutSigning {
-            keyAlias '25sprout'
-            keyPassword '53754077'
-            storeFile file('/Users/david/Workspace/AndroidStudio/apk/25sprout_2015.jks')
-            storePassword '53754077'
-        }
+        SproutSigning
     }
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
@@ -50,4 +45,22 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22.2.1'
+}
+
+//rootProject.file(): 取得根目錄中的檔案
+def ksFile = rootProject.file('local.properties')
+def props = new Properties();
+if (ksFile.canRead()) {
+    props.load(new FileInputStream(ksFile))
+
+    if (props != null) {
+        android.signingConfigs.SproutSigning.storeFile file(props['KEYSTORE_FILE'])
+        android.signingConfigs.SproutSigning.storePassword props['KEYSTORE_PASSWORD']
+        android.signingConfigs.SproutSigning.keyAlias props['KEYSTORE_ALIAS']
+        android.signingConfigs.SproutSigning.keyPassword props['KEYSTORE_ALIAS_PASSWORD']
+    } else {
+        println 'some entries in \'keystore.properties\' not found!'
+    }
+} else {
+    println '\'keystore.properties\' not found!'
 }
