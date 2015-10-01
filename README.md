@@ -98,10 +98,10 @@ productFlavors {
         }
     }
 ```
->**Explanation**：
->1. 這裏設定兩個 flavors：*demo* & *pub*
->2. 兩個 flavor 有各自的 versionName & Application ID
->3. 使用時，可以從Android Studio 側邊選單 > Build Variants 選擇。此時，依照上述的 build type 設定，你會有四個選項：demoDebug, demoRelease, pubDebug, pubRelease
+**Explanation**：
+1. 這裏設定兩個 flavors：*demo* & *pub*
+2. 兩個 flavor 有各自的 versionName & Application ID
+3. 使用時，可以從Android Studio 側邊選單 > Build Variants 選擇。此時，依照上述的 build type 設定，你會有四個選項：demoDebug, demoRelease, pubDebug, pubRelease
 
 
 Work with build variants
@@ -109,7 +109,7 @@ Work with build variants
 你可以依據不同的**flavor**，設定不同的 code, layout or resources。
 詳細實作過程可參照[官網][1]。
 
-本sample有實作該效果，可直接參考 sample code。
+本 sample 有實作該效果，可直接參考 sample code。
 注意事項：
 1. create new folder時，需要建立package name，記得要跟原本的package name一樣(反而是不用跟 application id 一樣)
 2. 如果有兩個flavor，當你的build Variant設定為first flavor時，second flavor不會被處理，所以會被標示呈錯誤，不要太緊張。
