@@ -75,12 +75,14 @@ buildTypes {
 
 productFlavors
 ---
+可以在Flavors設定的項目如下：
 1. Min SDK Version
 2. Target SDK Version
 3. Application ID
 4. Version Name & Version Code
 5. Signing Config
 6. ...
+
 詳情可以至 Project Structure > Flavors 瀏覽所有的設定。
 
 以下是本 sample app 的設定
