@@ -75,18 +75,13 @@ buildTypes {
 
 productFlavors
 ---
-可以建立不同版本的app。這裏可以調整的項目有
 1. Min SDK Version
 2. Target SDK Version
-2. Application ID
-3. Version Name & Version Code
-4. Signing Config
-5. ...
+3. Application ID
+4. Version Name & Version Code
+5. Signing Config
+6. ...
 詳情可以至 Project Structure > Flavors 瀏覽所有的設定。
-
-1. Item 1
-2. Item 2
-3. Item 3
 
 以下是本 sample app 的設定
 ```xml
