@@ -84,6 +84,10 @@ productFlavors
 5. ...
 詳情可以至 Project Structure > Flavors 瀏覽所有的設定。
 
+1. Item 1
+2. Item 2
+3. Item 3
+
 以下是本 sample app 的設定
 ```xml
 productFlavors {
