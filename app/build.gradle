@@ -19,9 +19,9 @@ android {
         debug {
             applicationIdSuffix ".debug"
         }
-        //  可以啟用 proguard
+        //  啟用 proguard
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -30,7 +30,7 @@ android {
         demo {
             //  使用上面定義的 Signing
             signingConfig signingConfigs.SproutSigning
-            //  此 applicationId 與 manifest 的 package name 不同
+            //  此 applicationId 刻意與 manifest 的 package name 不同
             applicationId 'com.sprout.gradletest.demo'
             versionName "1.0-demo"
         }
