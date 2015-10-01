@@ -111,9 +111,9 @@ Work with build variants
 
 本 sample 有實作該效果，可直接參考 sample code。
 注意事項：
-1. create new folder時，需要建立package name，記得要跟原本的package name一樣(反而是不用跟 application id 一樣)
-2. 如果有兩個flavor，當你的build Variant設定為first flavor時，second flavor不會被處理，所以會被標示呈錯誤，不要太緊張。
-3. 如果在 AndroidManifest 宣告中使用自訂的package path(例如使用GCM時會遇到)，記得要改成@{applicationId}。[參考][2]
++ create new folder時，需要建立package name，記得要跟原本的package name一樣(反而是不用跟 application id 一樣)
++ 如果有兩個flavor，當你的build Variant設定為first flavor時，second flavor不會被處理，所以會被標示呈錯誤，不要太緊張。
++ 如果在 AndroidManifest 宣告中使用自訂的package path(例如使用GCM時會遇到)，記得要改成@{applicationId}。[參考][2]
 
 
 ----------
