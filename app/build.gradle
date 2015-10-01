@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        SproutSigning {
+            keyAlias '25sprout'
+            keyPassword '53754077'
+            storeFile file('/Users/david/Workspace/AndroidStudio/apk/25sprout_2015.jks')
+            storePassword '53754077'
+        }
+    }
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+    defaultConfig {
+        applicationId "com.crazyma.gradletest"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        //  application id 會多加.debug，可以區分成不同的apk
+        //  debug沒辦法啟用proguard
+        debug {
+            applicationIdSuffix ".debug"
+        }
+        //  可以啟用 proguard
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //用來設定Build Variant，可以同一個project但是設定不同的 signingConfig & application id
+    productFlavors {
+        demo {
+            //  使用上面定義的 Signing
+            signingConfig signingConfigs.SproutSigning
+            //  此 applicationId 與 manifest 的 package name 不同
+            applicationId 'com.sprout.gradletest.demo'
+            versionName "1.0-demo"
+        }
+        pub {
+            signingConfig signingConfigs.SproutSigning
+            applicationId "com.sprout.gradletest.pub"
+            versionName "1.0-pub"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.2.1'
+}
